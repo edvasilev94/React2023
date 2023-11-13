@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+
+.createBooking {
+    height: 35rem;
+}
+
+.createSection {
+    padding-top: 3.2rem;
+    padding-bottom: 0px;
+}
