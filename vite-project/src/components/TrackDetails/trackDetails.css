@@ -5,3 +5,7 @@
 .detailsImage {
     object-fit: cover;
 }
+
+.desc-p {
+    text-align: center;
+}

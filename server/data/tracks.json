@@ -6,10 +6,8 @@
         "length": "2",
         "duration": "1",
         "difficulty": "Easy",
-        "details": {
-            "mountain": "Stara Planina",
-            "description": "Very old mauntain."
-        }
+        "mountain": "Stara Planina",
+        "description": "Very old mauntain."
     },
     "02": {
         "_id": "02",
@@ -18,10 +16,9 @@
         "length": "4",
         "duration": "2",
         "difficulty": "Medium",
-        "details": {
-            "mountain": "Rila",
-            "description": "Very high mauntain."
-        }
+        "mountain": "Rila",
+        "description": "Very high mauntain."
+
     },
     "03": {
         "_id": "03",
@@ -30,10 +27,8 @@
         "length": "6",
         "duration": "4",
         "difficulty": "Hard",
-        "details": {
-            "mountain": "Pirin",
-            "description": "Very beautyful mauntain."
-        }
+        "mountain": "Pirin",
+        "description": "Very beautyful mauntain."
     },
     "04": {
         "_id": "04",
@@ -42,9 +37,7 @@
         "length": "8",
         "duration": "6",
         "difficulty": "Hard",
-        "details": {
-            "mountain": "Vitosha",
-            "description": "Near Sofia."
-        }
+        "mountain": "Vitosha",
+        "description": "Near Sofia."
     }
 }

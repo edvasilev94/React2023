@@ -19,7 +19,7 @@ export default function CardTemplate({
                 <div className="text-center p-4">
                     <h3 className="mb-0">{track.name}</h3>
                     <div className="d-flex justify-content-center mb-2">
-                        <Link to="/detais" className="detailsButton btn btn-sm btn-primary px-3 border-end">Read More</Link>
+                        <Link to={`/track/details/${track._id}`} className="detailsButton btn btn-sm btn-primary px-3 border-end">Read More</Link>
                     </div>
                 </div>
             </div>

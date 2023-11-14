@@ -21,7 +21,7 @@ function App() {
         <Route path='register' element= {<Register />} />
         <Route path='login' element= {<Login />} />
         <Route path='card' element= {<CardTemplate />} />
-        <Route path='details' element= {<TrackDetails />} />
+        <Route path='track/details/:trackId' element= {<TrackDetails />} />
       </Routes>
       <Footer />
     </div>
