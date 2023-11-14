@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import HomePage from './components/Homepage/HomePage';
 import CardTemplate from './components/CardTemplate/CartTemplate';
 import AllTracks from './components/AllTracks/AllTracks';
+import TrackDetails from './components/TrackDetails/TrackDetails';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='register' element= {<Register />} />
         <Route path='login' element= {<Login />} />
         <Route path='card' element= {<CardTemplate />} />
+        <Route path='details' element= {<TrackDetails />} />
       </Routes>
       <Footer />
     </div>

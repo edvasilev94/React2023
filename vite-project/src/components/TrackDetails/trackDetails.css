@@ -1,0 +1,7 @@
+.trackDetailsContainer {
+    min-height: 38.2rem;
+}
+
+.detailsImage {
+    object-fit: cover;
+}
