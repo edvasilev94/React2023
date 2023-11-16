@@ -9,6 +9,7 @@ import HomePage from './components/Homepage/HomePage';
 import CardTemplate from './components/CardTemplate/CartTemplate';
 import AllTracks from './components/AllTracks/AllTracks';
 import TrackDetails from './components/TrackDetails/TrackDetails';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='login' element= {<Login />} />
         <Route path='card' element= {<CardTemplate />} />
         <Route path='track/details/:trackId' element= {<TrackDetails />} />
+        <Route path='*' element= {<NotFound />} />
       </Routes>
       <Footer />
     </div>
