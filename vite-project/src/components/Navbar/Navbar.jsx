@@ -19,6 +19,7 @@ export default function Navbar() {
             <Link to="#" className="nav-item nav-link">My Tracks</Link>
             <Link to="#" className="nav-item nav-link">Favourites</Link>
         </div>
+        <Link to="/create" className="btn btn-primary rounded-pill py-2 px-4">Create track</Link>
         <Link to="/logout" className="btn btn-primary rounded-pill py-2 px-4">Log Out</Link>
         </>
     )
