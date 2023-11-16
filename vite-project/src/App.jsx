@@ -11,6 +11,7 @@ import CardTemplate from './components/CardTemplate/CartTemplate';
 import AllTracks from './components/AllTracks/AllTracks';
 import TrackDetails from './components/TrackDetails/TrackDetails';
 import NotFound from './components/NotFound/NotFound';
+import Logout from './components/Loguout/Logout';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/create' element= { <Create />} />
           <Route path='/register' element= {<Register />} />
           <Route path='/login' element= {<Login />} />
+          <Route path='/logout' element= {<Logout />} />
           <Route path='/card' element= {<CardTemplate />} />
           <Route path='/track/details/:trackId' element= {<TrackDetails />} />
           <Route path='/*' element= {<NotFound />} />
