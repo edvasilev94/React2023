@@ -17,13 +17,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element= { <HomePage /> } />
-        <Route path='tracks' element= { <AllTracks /> } />
-        <Route path='create' element= { <Create />} />
-        <Route path='register' element= {<Register />} />
-        <Route path='login' element= {<Login />} />
-        <Route path='card' element= {<CardTemplate />} />
-        <Route path='track/details/:trackId' element= {<TrackDetails />} />
-        <Route path='*' element= {<NotFound />} />
+        <Route path='/tracks' element= { <AllTracks /> } />
+        <Route path='/create' element= { <Create />} />
+        <Route path='/register' element= {<Register />} />
+        <Route path='/login' element= {<Login />} />
+        <Route path='/card' element= {<CardTemplate />} />
+        <Route path='/track/details/:trackId' element= {<TrackDetails />} />
+        <Route path='/*' element= {<NotFound />} />
       </Routes>
       <Footer />
     </div>
