@@ -7,7 +7,7 @@ export default function Register () {
         <div className="container">
             <div className="registerBooking booking p-5">
                 <div className="row g-5 align-items-center">
-                    <div className="col-md-6 reg">
+                    <div className="col-md-6 reg animated slideInDown">
                         <h1 className="text-white mb-4">Register</h1>
                         <form>
                             <div className="row g-3">

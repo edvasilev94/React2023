@@ -1,9 +1,11 @@
+import "./notFound.css"
+
 import { Link } from 'react-router-dom'
 
 export default function HeroSection () {
     return (
         <div className="container-fluid position-relative p-0">        
-            <div className=" container-fluid bg-primary py-5 mb-5 hero-header">
+            <div className=" container-fluid bg-primary py-5 mb-5 notFound">
                 <div className="container py-5">
                     <div className="row justify-content-center py-5">
                         <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
