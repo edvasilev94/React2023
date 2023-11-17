@@ -78,13 +78,13 @@ export default function Create() {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-floating">
-                                            <input type="length" className="form-control bg-transparent" name="length" id="length" placeholder="Length in kilometers" />
+                                            <input type="number" className="form-control bg-transparent" name="length" id="length" placeholder="Length in kilometers" />
                                             <label htmlFor="length">Length in kilometers</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" className="form-control bg-transparent datetimepicker-input" name="duration" id="duration" placeholder="Track duration in hours" data-target="duration" data-toggle="duration" />
+                                            <input type="number" className="form-control bg-transparent datetimepicker-input" name="duration" id="duration" placeholder="Track duration in hours" data-target="duration" data-toggle="duration" />
                                             <label htmlFor="duration">Track duration in hours</label>
                                         </div>
                                     </div>
