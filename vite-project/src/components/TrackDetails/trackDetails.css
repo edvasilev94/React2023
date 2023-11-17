@@ -10,3 +10,27 @@
     text-align: justify;
     text-justify: inter-word;
 }
+
+.ownerButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8rem;
+}
+
+.editButton {
+    border-radius: 0.6rem;
+    background-color: rgb(255, 166, 0);
+    border-color: rgb(255, 166, 0);
+}
+
+.deleteButton {
+    border-radius: 0.6rem;
+    background-color: rgba(204, 51, 13, 0.719);
+    border-color: rgb(255, 166, 0);
+}
+
+.infoPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

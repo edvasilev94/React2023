@@ -16,7 +16,7 @@ export default function Navbar() {
         <div className="navbar-nav ms-auto py-0">
             <Link to="/" className="nav-item nav-link  active">Home</Link>
             <Link to="tracks" className="nav-item nav-link">All Tracks</Link>
-            <Link to="#" className="nav-item nav-link">My Tracks</Link>
+            <Link to="/mytracks" className="nav-item nav-link">My Tracks</Link>
             <Link to="#" className="nav-item nav-link">Favourites</Link>
         </div>
         <Link to="/create" className="btn btn-primary rounded-pill py-2 px-4">Create track</Link>

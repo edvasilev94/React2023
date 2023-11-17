@@ -12,6 +12,7 @@ import AllTracks from './components/AllTracks/AllTracks';
 import TrackDetails from './components/TrackDetails/TrackDetails';
 import NotFound from './components/NotFound/NotFound';
 import Logout from './components/Loguout/Logout';
+import MyTracks from './components/MyTracks/MyTracks';
 
 function App() {
   return (
@@ -22,11 +23,13 @@ function App() {
           <Route path='/' element= { <HomePage /> } />
           <Route path='/tracks' element= { <AllTracks /> } />
           <Route path='/create' element= { <Create />} />
+          <Route path='/mytracks' element= { <MyTracks />} />
           <Route path='/register' element= {<Register />} />
           <Route path='/login' element= {<Login />} />
           <Route path='/logout' element= {<Logout />} />
           <Route path='/card' element= {<CardTemplate />} />
           <Route path='/track/details/:trackId' element= {<TrackDetails />} />
+          {/* <Route path='/track/edit/:trackId' element= {<TrackDetails />} /> */}
           <Route path='/*' element= {<NotFound />} />
         </Routes>
         <Footer />
