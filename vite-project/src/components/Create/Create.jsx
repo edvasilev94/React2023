@@ -56,7 +56,7 @@ export default function Create() {
     return (
         <div className="createSection container-xxl wow fadeInUp" data-wow-delay="0.1s">
             <div className="container">
-                <div className="createBooking booking p-5">
+                <div className="booking p-5 createBooking">
                     <div className="row g-5 align-items-center">
                         <div className="col-md-6">
                             <h1 className="text-white mb-4">Create a track</h1>

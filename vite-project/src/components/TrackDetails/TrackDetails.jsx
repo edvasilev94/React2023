@@ -45,7 +45,7 @@ export default function TrackDetails() {
     )
 
     let favButton = (
-        <Link to={`#`} className="favButton btn btn-primary py-3 px-5 mt-2 " href="">Favourite    <i class="fa-solid fa-star"></i></Link>
+        <Link to={`#`} className="favButton btn btn-primary py-3 px-5 mt-2 " href="">Favourite<i className="fa-solid fa-star"></i></Link>
     )
 
 

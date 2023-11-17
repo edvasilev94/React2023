@@ -4,9 +4,13 @@ h1 {
 
 .createBooking {
     height: 35rem;
+    background-image: url("https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_1280.jpg");
+    background-size: cover;
 }
 
 .createSection {
     padding-top: 3.2rem;
     padding-bottom: 0px;
 }
+
+

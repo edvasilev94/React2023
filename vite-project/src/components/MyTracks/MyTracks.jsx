@@ -24,6 +24,7 @@ export default function MyTracks() {
     }, []);
 
 
+
     return (
         <div className="myTracksContainer container-xxl py-5 ">
             <div className="container">
@@ -34,7 +35,8 @@ export default function MyTracks() {
                 <div className='row g-4'>
                 {tracks
                     .filter(x => x._ownerId == user._id)
-                    .map(x => <CardTemplate key={x._id} track={x} />)}
+                    .map(x => <CardTemplate key={x._id} track={x} />)
+                }
                 </div>
             </div>
         </div>
