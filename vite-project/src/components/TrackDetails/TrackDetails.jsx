@@ -44,6 +44,9 @@ export default function TrackDetails() {
         </div>
     )
 
+    let favButton = (
+        <Link to={`#`} className="favButton btn btn-primary py-3 px-5 mt-2 " href="">Favourite    <i class="fa-solid fa-star"></i></Link>
+    )
 
 
 
@@ -80,6 +83,11 @@ export default function TrackDetails() {
                             user._id === track._ownerId
 							? ownerButtons
 							: null
+                        }
+                        {
+                            user.email && user._id !== track._ownerId
+                            ? favButton
+                            :null
                         }
                     </div>
                 </div>
