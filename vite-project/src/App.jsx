@@ -13,6 +13,7 @@ import TrackDetails from './components/TrackDetails/TrackDetails';
 import NotFound from './components/NotFound/NotFound';
 import Logout from './components/Loguout/Logout';
 import MyTracks from './components/MyTracks/MyTracks';
+import Edit from './components/EditTrack/Edit';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           <Route path='/logout' element= {<Logout />} />
           <Route path='/card' element= {<CardTemplate />} />
           <Route path='/track/details/:trackId' element= {<TrackDetails />} />
-          {/* <Route path='/track/edit/:trackId' element= {<TrackDetails />} /> */}
+          <Route path='/track/edit/:trackId' element= {<Edit />} />
           <Route path='/*' element= {<NotFound />} />
         </Routes>
         <Footer />

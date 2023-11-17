@@ -67,7 +67,7 @@ export default function TrackDetails() {
                                 <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>The track is located in {track.mountain} mountain</p>
                             </div>
                             <div className="col-sm-6">
-                                <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Length: {track.length} KM</p>
+                                <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Length: {track.trackLength} KM</p>
                             </div>
                             <div className="col-sm-6">
                                 <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Duration: {track.duration} Hours</p>

@@ -33,7 +33,7 @@ export const edit = async (trackDetails, token, tarckId) => {
             "content-type": "application/json",
             "X-Authorization": token,
         },
-        body: JSON.stringify({...trackDetails, likes: []})
+        body: JSON.stringify({...trackDetails})
     });
 
     let result = await response.json();
