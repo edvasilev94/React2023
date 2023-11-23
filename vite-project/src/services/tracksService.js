@@ -17,7 +17,7 @@ export const create = async (trackDetails, token) => {
             "content-type": "application/json",
             "X-Authorization": token,
         },
-        body: JSON.stringify({...trackDetails})
+        body: JSON.stringify({ ...trackDetails })
     });
 
     let result = await response.json();
@@ -33,7 +33,7 @@ export const edit = async (trackDetails, token, tarckId) => {
             "content-type": "application/json",
             "X-Authorization": token,
         },
-        body: JSON.stringify({...trackDetails})
+        body: JSON.stringify({ ...trackDetails })
     });
 
     let result = await response.json();
@@ -52,13 +52,39 @@ export const del = (tarckId, token) => {
 
 
 
-export const wtf = (tarckId, track, token) => {
-    return fetch(`${baseUrl}/tracks/${tarckId}`, {
-        method: 'PUT',
+// export const wtf = (tarckId, track, token) => {
+//     return fetch(`${baseUrl}/tracks/${tarckId}`, {
+//         method: 'PUT',
+//         headers: {
+//             'content-type': 'application/json',
+//             'X-Authorization': token
+//         },
+//         body: JSON.stringify(track)
+//     }).then(res => res.json());
+// };
+
+export const like = async (userId, trackId, token) => {
+    let response = await fetch(`${baseUrl}/likes`, {
+        method: "POST",
         headers: {
-            'content-type': 'application/json',
-            'X-Authorization': token
+            "content-type": "application/json",
+            "X-Authorization": token,
         },
-        body: JSON.stringify(track)
-    }).then(res => res.json());
-};
+        body: JSON.stringify({userId, trackId})
+    });
+
+    let result = await response.json();
+
+    return result;
+}
+
+
+export const getAllLikes = async (trackId) => {
+    const query = encodeURIComponent(`trackId="${trackId}"`);
+
+    let response = await fetch(`${baseUrl}/likes?where=${query}`)
+    
+    let result = await response.json();
+    return result.length
+
+}

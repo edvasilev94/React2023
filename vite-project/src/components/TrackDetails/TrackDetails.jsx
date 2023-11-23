@@ -15,50 +15,75 @@ export default function TrackDetails() {
     const { user } = useAuthContext();
 
     const [track, setTrack] = useState([]);
+    const [likes, setLikes] = useState([]);
 
     useEffect(() => {
-		tracksService.getOne(trackId)
-			.then(x => {
-				setTrack(x);
-			})
-			.catch(err => {
-				console.log(err);
-			})
+        tracksService.getOne(trackId)
+            .then(x => {
+                setTrack(x);
+            })
+            .catch(err => {
+                console.log(err);
+            })
 
-	}, [trackId]);
+    }, [trackId]);
+
+    useEffect(() => {
+        tracksService.getAllLikes(trackId)
+        .then(likeCount => {
+            if(likeCount === undefined){
+                setTrack(state => ({...state, likes: 0}))
+            } else {
+                setTrack(state => ({...state, likes: likeCount}))
+            }
+        })
+    }, [])
 
     const deleteHandler = (e) => {
-		e.preventDefault();
+        e.preventDefault();
 
-		tracksService.del(trackId, user.accessToken)
-			.then(x => {
-				navigate("/mytracks")
-			})
-	}
+        tracksService.del(trackId, user.accessToken)
+            .then(x => {
+                navigate("/mytracks")
+            })
+    }
+
+
+
+    const likeButtonClick = () => {
+        // if(track.likes.includes(user._id)){
+        //     console.log('already liked')
+        //     return;
+        // }
+
+
+        tracksService.like(user._id, trackId, user.accessToken)
+            .then(() => {
+                setTrack(state => ({ ...state, likes: state.likes + 1 }))
+            })
+
+            
+    }
 
 
     let ownerButtons = (
         <div className="ownerButtons">
-        <Link to={`/track/edit/${track._id}`} className="editButton btn btn-primary py-3 px-5 mt-2" href="">Edit</Link>
-        <Link to={`/track/delete/${track._id}`} className="deleteButton btn btn-primary py-3 px-5 mt-2" onClick={deleteHandler} href="">Delete</Link>
+            <Link to={`/track/edit/${track._id}`} className="editButton btn btn-primary py-3 px-5 mt-2" href="">Edit</Link>
+            <Link to={`/track/delete/${track._id}`} className="deleteButton btn btn-primary py-3 px-5 mt-2" onClick={deleteHandler} href="">Delete</Link>
         </div>
     )
 
     let favButton = (
-        <Link to={`#`} className="favButton btn btn-primary py-3 px-5 mt-2 " href="">Favourite<i className="fa-solid fa-star"></i></Link>
+        <Link to={`#`} className="favButton btn btn-primary py-3 px-5 mt-2 " href="" onClick={likeButtonClick}><i className="fa-solid fa-heart"></i>Like {track?.likes}</Link>
     )
-
-
-
-
 
     return (
         <div className="trackDetailsContainer container-xxl py-5">
             <div className="container">
                 <div className="row g-5">
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style={{minHeight: "400px"}}>
+                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style={{ minHeight: "400px" }}>
                         <div className="position-relative h-100">
-                            <img className="detailsImage img-fluid position-absolute w-100 h-100" src={track.img} alt="" style={{objectFit: "cover"}} />
+                            <img className="detailsImage img-fluid position-absolute w-100 h-100" src={track.img} alt="" style={{ objectFit: "cover" }} />
                         </div>
                     </div>
                     <div className="infoPart col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -81,13 +106,13 @@ export default function TrackDetails() {
                         </div>
                         {
                             user._id === track._ownerId
-							? ownerButtons
-							: null
+                                ? ownerButtons
+                                : null
                         }
                         {
                             user.email && user._id !== track._ownerId
-                            ? favButton
-                            :null
+                                ? favButton
+                                : null
                         }
                     </div>
                 </div>
