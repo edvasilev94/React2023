@@ -15,7 +15,6 @@ export default function TrackDetails() {
     const { user } = useAuthContext();
 
     const [track, setTrack] = useState([]);
-    // const [likes, setLikes] = useState([]);
     const [userExists, setUserExists] = useState(false);
 
 
@@ -40,6 +39,7 @@ export default function TrackDetails() {
             }
 
             if(likesArr.length === undefined){
+                console.log(likesArr)
                 setTrack(state => ({...state, likes: 0}))
             } else {
                 setTrack(state => ({...state, likes: likesArr.length}))

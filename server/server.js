@@ -1340,6 +1340,9 @@
     	}
     };
     var seedData = {
+        "likes": {
+            "likes": []
+        },
         "tracks": {
             "01": {
                 "_id": "01",
