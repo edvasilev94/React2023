@@ -15,7 +15,9 @@ export default function TrackDetails() {
     const { user } = useAuthContext();
 
     const [track, setTrack] = useState([]);
-    const [likes, setLikes] = useState([]);
+    // const [likes, setLikes] = useState([]);
+    const [userExists, setUserExists] = useState(false);
+
 
     useEffect(() => {
         tracksService.getOne(trackId)
@@ -28,13 +30,19 @@ export default function TrackDetails() {
 
     }, [trackId]);
 
+
+
     useEffect(() => {
         tracksService.getAllLikes(trackId)
-        .then(likeCount => {
-            if(likeCount === undefined){
+        .then(likesArr => {
+            if(likesArr.some(obj => Object.values(obj).includes(user._id))){
+                setUserExists(true);
+            }
+
+            if(likesArr.length === undefined){
                 setTrack(state => ({...state, likes: 0}))
             } else {
-                setTrack(state => ({...state, likes: likeCount}))
+                setTrack(state => ({...state, likes: likesArr.length}))
             }
         })
     }, [])
@@ -49,19 +57,16 @@ export default function TrackDetails() {
     }
 
 
-
     const likeButtonClick = () => {
-        // if(track.likes.includes(user._id)){
-        //     console.log('already liked')
-        //     return;
-        // }
-
+        
 
         tracksService.like(user._id, trackId, user.accessToken)
-            .then(() => {
+            .then((result) => {
+                if(result._ownerId === user._id){
+                    setUserExists(true)
+                }
                 setTrack(state => ({ ...state, likes: state.likes + 1 }))
             })
-
             
     }
 
@@ -73,8 +78,10 @@ export default function TrackDetails() {
         </div>
     )
 
+        let favButtonClasses = " btn btn-primary py-3 px-5 mt-2";
+
     let favButton = (
-        <Link to={`#`} className="favButton btn btn-primary py-3 px-5 mt-2 " href="" onClick={likeButtonClick}><i className="fa-solid fa-heart"></i>Like {track?.likes}</Link>
+        <Link to={`#`} className={`${userExists ? 'disabledButton' : 'favButton'}${favButtonClasses}`} href="" onClick={likeButtonClick}><i className="fa-solid fa-heart"></i>Like</Link>
     )
 
     return (
@@ -114,6 +121,9 @@ export default function TrackDetails() {
                                 ? favButton
                                 : null
                         }
+                        <div>
+                            Likes: {track?.likes}
+                        </div>
                     </div>
                 </div>
             </div>

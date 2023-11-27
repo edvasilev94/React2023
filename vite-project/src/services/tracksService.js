@@ -74,7 +74,6 @@ export const like = async (userId, trackId, token) => {
     });
 
     let result = await response.json();
-
     return result;
 }
 
@@ -85,6 +84,7 @@ export const getAllLikes = async (trackId) => {
     let response = await fetch(`${baseUrl}/likes?where=${query}`)
     
     let result = await response.json();
-    return result.length
+    console.log(result)
+    return result
 
 }
