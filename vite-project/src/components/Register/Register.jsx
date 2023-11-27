@@ -86,13 +86,13 @@ export default function Register() {
                                     </div>
                                     <div className="col-md-6 reg">
                                         <div className="form-floating regf date" id="date3" data-target-input="nearest">
-                                            <input type="text" className="form-control bg-transparent datetimepicker-input" name="password" id="password" placeholder="password" data-target="password" data-toggle="password" onChange={onChangeHandler}/>
+                                            <input type="password" className="form-control bg-transparent datetimepicker-input" name="password" id="password" placeholder="password" data-target="password" data-toggle="password" onChange={onChangeHandler}/>
                                             <label htmlFor="password">Password</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6 reg">
                                         <div className="form-floating regf date" id="date3" data-target-input="nearest">
-                                            <input type="text" className="form-control bg-transparent datetimepicker-input" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" data-target="confirmPassword" data-toggle="confirmPassword" onChange={onChangeHandler}/>
+                                            <input type="password" className="form-control bg-transparent datetimepicker-input" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" data-target="confirmPassword" data-toggle="confirmPassword" onChange={onChangeHandler}/>
                                             <label htmlFor="confirmPassword">Confirm your Password</label>
                                         </div>
                                     </div>
