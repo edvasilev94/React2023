@@ -57,6 +57,7 @@ export default function Login () {
                                     <div className="form-floating regf date" id="date3" data-target-input="nearest">
                                         <input type="password" className="form-control bg-transparent datetimepicker-input" name="password" id="password" placeholder="password" data-target="password" data-toggle="password" />
                                         <label htmlFor="password">Password</label>
+                                        {errors.message ? <p className="wrongLogin">Wrong username or password!</p> : null}
                                     </div>
                                 </div>
                                 <div className="col-12 regButton">

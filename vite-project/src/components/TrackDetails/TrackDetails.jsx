@@ -38,8 +38,7 @@ export default function TrackDetails() {
                 setUserExists(true);
             }
 
-            if(likesArr.length === undefined){
-                console.log(likesArr)
+            if(likesArr.length === 0){
                 setTrack(state => ({...state, likes: 0}))
             } else {
                 setTrack(state => ({...state, likes: likesArr.length}))

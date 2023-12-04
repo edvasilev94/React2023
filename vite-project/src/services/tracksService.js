@@ -51,18 +51,6 @@ export const del = (tarckId, token) => {
 };
 
 
-
-// export const wtf = (tarckId, track, token) => {
-//     return fetch(`${baseUrl}/tracks/${tarckId}`, {
-//         method: 'PUT',
-//         headers: {
-//             'content-type': 'application/json',
-//             'X-Authorization': token
-//         },
-//         body: JSON.stringify(track)
-//     }).then(res => res.json());
-// };
-
 export const like = async (userId, trackId, token) => {
     let response = await fetch(`${baseUrl}/likes`, {
         method: "POST",
@@ -84,7 +72,6 @@ export const getAllLikes = async (trackId) => {
     let response = await fetch(`${baseUrl}/likes?where=${query}`)
     
     let result = await response.json();
-    console.log(result)
     return result
 
 }
