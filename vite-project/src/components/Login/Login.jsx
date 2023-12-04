@@ -32,7 +32,7 @@ export default function Login () {
             .catch(err => {
                 setErrors(state =>({
                     ...state,
-                    message: "Invalid username or password"
+                    message: "Invalid username or password!"
                 }))
             });
     }
@@ -57,7 +57,7 @@ export default function Login () {
                                     <div className="form-floating regf date" id="date3" data-target-input="nearest">
                                         <input type="password" className="form-control bg-transparent datetimepicker-input" name="password" id="password" placeholder="password" data-target="password" data-toggle="password" />
                                         <label htmlFor="password">Password</label>
-                                        {errors.message ? <p className="wrongLogin">Wrong username or password!</p> : null}
+                                        {errors.message ? <p className="wrongLogin">{errors.message}</p> : null}
                                     </div>
                                 </div>
                                 <div className="col-12 regButton">

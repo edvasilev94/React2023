@@ -12,6 +12,7 @@ export default function Register() {
     const navigate = useNavigate();
     const { login } = useAuthContext();
 	const [passCheck, setPassCheck] = useState({passMessage: null})
+	const [errors, setErrors] = useState({errorsMessage: null})
 
 
 	const onChangeHandler = () =>{
@@ -34,13 +35,14 @@ export default function Register() {
         let password = formData.get('password');
         let confirmPassword = formData.get('confirmPassword');
 
-		let isFilled = true;
-
 		if(username === ""
 			|| email ===""
 			|| password ===""
 			|| confirmPassword ===""	){
-				isFilled = false;
+				return setErrors(state => ({
+                    ...state,
+                    errorsMessage: "All fields are reqired!"
+                }))
 		}
 
 		if(password !== confirmPassword){
@@ -51,7 +53,7 @@ export default function Register() {
 		}
 		
 		
-		if(passCheck.passMessage === null && isFilled === true){
+		if(passCheck.passMessage === null){
 			authService.register(username, email, password)   
 			.then(userData => {
 				login(userData);
@@ -95,6 +97,8 @@ export default function Register() {
                                             <input type="password" className="form-control bg-transparent datetimepicker-input" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" data-target="confirmPassword" data-toggle="confirmPassword" onChange={onChangeHandler}/>
                                             <label htmlFor="confirmPassword">Confirm your Password</label>
                                         </div>
+                                        {errors.errorsMessage ? <p className="registerError">{errors.errorsMessage}</p> : null}
+                                        {passCheck.passMessage ? <p className="registerError">{passCheck.passMessage}</p> : null}   
                                     </div>
                                     <div className="col-12 regButton">
                                         <button className="btn btn-outline-light w-100 py-3" type="submit">Register</button>

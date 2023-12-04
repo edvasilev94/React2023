@@ -118,7 +118,7 @@ export default function Edit() {
                                             <textarea className="form-control bg-transparent" name="description" placeholder="Describe the track" id="description" defaultValue={track.description} style={{ height: "100px" }}></textarea>
                                             <label htmlFor="message">Describe the track</label>
                                         </div>
-                                        {error.message ? <p className="editError">All Fields are required!</p> : null}
+                                        {error.message ? <p className="editError">{error.message}</p> : null}
                                     </div>
                                     <div className="col-12">
                                         <button className="btn btn-outline-light w-100 py-3" type="submit">Edit</button>
