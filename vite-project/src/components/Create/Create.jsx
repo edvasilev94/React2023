@@ -103,6 +103,7 @@ export default function Create() {
                                             <textarea className="form-control bg-transparent" name="description" placeholder="Describe the track" id="description" style={{ height: "100px" }}></textarea>
                                             <label htmlFor="message">Describe the track</label>
                                         </div>
+                                        {error.message ? <p className="createError">All Fields are required!</p> : null}
                                     </div>
                                     <div className="col-12">
                                         <button className="btn btn-outline-light w-100 py-3" type="submit">Create Track</button>
