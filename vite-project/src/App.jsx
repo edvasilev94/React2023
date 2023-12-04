@@ -14,7 +14,8 @@ import NotFound from './components/NotFound/NotFound';
 import Logout from './components/Loguout/Logout';
 import MyTracks from './components/MyTracks/MyTracks';
 import Edit from './components/EditTrack/Edit';
-import AuthGuardGuest from './components/guards/AuthGuard';
+import AuthGuardGuest from './components/guards/AuthGuardGuest'
+import AuthGuardUser from './components/guards/AuthGuardUser';
 
 function App() {
   return (
@@ -30,8 +31,10 @@ function App() {
             <Route path='/logout' element={<Logout />} /> 
             <Route path='/track/edit/:trackId' element={<Edit />} />
           </Route>
-          <Route path='/register' element={<Register />} />
-          <Route path='/login' element={<Login />} />
+          <Route element={<AuthGuardUser />}>
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+          </Route>
           <Route path='/card' element={<CardTemplate />} />
           <Route path='/track/details/:trackId' element={<TrackDetails />} />
           <Route path='/*' element={<NotFound />} />

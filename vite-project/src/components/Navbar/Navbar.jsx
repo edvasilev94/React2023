@@ -14,7 +14,7 @@ export default function Navbar() {
     let userNav = (
         <>
         <div className="navbar-nav ms-auto py-0">
-            <Link to="/" className="nav-item nav-link  active">Home</Link>
+            <Link to="/" className="nav-item nav-link">Home</Link>
             <Link to="tracks" className="nav-item nav-link">All Tracks</Link>
             <Link to="/mytracks" className="nav-item nav-link">My Tracks</Link>
         </div>
