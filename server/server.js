@@ -1344,46 +1344,46 @@
             "likes": []
         },
         "tracks": {
-            "01": {
-                "_id": "01",
-                "name": "Stara Planina",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Triglav_massif%2C_Bulgaria.jpg",
+            "41417821-82c1-4fa1-988e-75bef38dfjehifiw": {
+                "_id": "41417821-82c1-4fa1-988e-75bef38dfjehifiw",
+                "name": "Seven Rila Lakes",
+                "img": "https://sofiaadventures.com/wp-content/uploads/2018/03/rila-lakes-2.jpg",
+                "trackLength": "8",
+                "duration": "5",
+                "difficulty": "Medium",
+                "mountain": "Rila",
+                "description": "The Seven Rila Lakes are a group of glacial lakes, situated in the northwestern Rila Mountain in Bulgaria. They are the most visited group of lakes in Bulgaria. The lakes are situated between 2,100 and 2,500 metres elevation above sea level."
+            },
+            "41417821-82c1-4fa1-988e-75bef38dcfkvmtakgne": {
+                "_id": "41417821-82c1-4fa1-988e-75bef38dcfkvmtakgne",
+                "name": "Belogradchik Rocks",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Belogradchik_Fortress_Entrance.jpg",
+                "trackLength": "4",
+                "duration": "2",
+                "difficulty": "Easy",
+                "mountain": "Balkan",
+                "description": "The Belogradchik Rocks are a group of strangely shaped sandstone and conglomerate rock formations located on the western slopes of the Balkan Mountains (Stara Planina) near the town of Belogradchik in northwest Bulgaria. The rocks vary in color from primarily red to yellow; some of the rocks reach up to 200 m in height. Many rocks have fantastic shapes and are associated with interesting legends. They are often named after people or objects they are thought to resemble. The Belogradchik Rocks have been declared a Natural Landmark by the Bulgarian government and are a major tourist attraction in the region."
+        
+            },
+            "41417821-82c1-4fa1-988e-75bg954uisddwjqw": {
+                "_id": "41417821-82c1-4fa1-988e-75bg954uisddwjqw",
+                "name": "Koncheto",
+                "img": "https://silverlight.store/wp-content/uploads/2023/09/GOPR0234-scaled-e1694140951640-1375x800.jpg",
+                "trackLength": "12",
+                "duration": "10",
+                "difficulty": "Very Hard",
+                "mountain": "Pirin",
+                "description": "Koncheto is a name given to a knife-edge ridge in the Pirin Mountains in Bulgaria, at an elevation of approximately 2,810 metres, between the peaks Banski Suhodol (2,884 meters) and Kutelo (2,908 metres). There are steep slopes on either side: the northwestern side is almost vertical and 300–400 metres deep, while the southwestern side is less steep (approximately 30 degrees) but deeper (800 metres). There is a steel cable stretched along the top of the ridge to help hikers across."
+            },
+            "41417821-82c1-4fa1-988e-75bef3vbmmndfisqvba": {
+                "_id": "41417821-82c1-4fa1-988e-75bef3vbmmndfisqvba",
+                "name": "Smolyan lakes",
+                "img": "https://bulgariatravel.org/wp-content/uploads/2020/imported/197_1.jpg",
                 "trackLength": "2",
                 "duration": "1",
                 "difficulty": "Easy",
-                "mountain": "Stara Planina",
-                "description": "Very old mauntain."
-            },
-            "02": {
-                "_id": "02",
-                "name": "Rila",
-                "img": "https://freesofiatour.com/wp-content/uploads/2018/05/seven-rila-lakes-how-to-get-to-1200x675.jpeg",
-                "trackLength": "4",
-                "duration": "2",
-                "difficulty": "Medium",
-                "mountain": "Rila",
-                "description": "Very high mauntain."
-        
-            },
-            "03": {
-                "_id": "03",
-                "name": "Pirin",
-                "img": "https://bulgariawalking.com/wp-content/uploads/2020/04/pirin-trekking-holidays-bulgaria.jpg",
-                "trackLength": "6",
-                "duration": "4",
-                "difficulty": "Hard",
-                "mountain": "Pirin",
-                "description": "Very beautyful mauntain."
-            },
-            "04": {
-                "_id": "04",
-                "name": "Vitosha",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Vitosha_seen_from_the_center_of_Sofia.jpg",
-                "trackLength": "8",
-                "duration": "6",
-                "difficulty": "Hard",
-                "mountain": "Vitosha",
-                "description": "Near Sofia."
+                "mountain": "Rodopi",
+                "description": "They are scattered along the left slope of the Cherna Reka valley, from the Orpheus Rocks and Snezhanka Peak to the town of Smolyan. They were formed in the occipital depressions of a large landslide, resulting from the contact of rhyolitic rocks and the water-resistant sedimentary rocks below them."
             }
         }
     };
