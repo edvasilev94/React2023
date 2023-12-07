@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CardTemplate from "../CardTemplate/CartTemplate";
 
 import * as trackService from "../../services/tracksService";
 
 export default function AllTracks() {
 
+    const navigate = useNavigate();
     const [tracks, setTracks] = useState([]);
 
     useEffect(() => {
         trackService.getAll()
             .then(result => {
-
                 setTracks(result);
             })
             .catch(err => {
                 console.log(err);
+                alert('Oops! Something went wrong on our end. Please try again later.');
+                navigate("/");
             })
     }, []);
 

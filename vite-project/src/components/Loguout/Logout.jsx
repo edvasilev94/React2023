@@ -14,6 +14,11 @@ export default function  Logout () {
                 logout();
                 navigate('/');
             })
+            .catch(err => {
+                console.log(err);
+                alert('Oops! Something went wrong on our end. Please try again later.');
+                navigate("/");
+            })
     }, [])
 
     return null;

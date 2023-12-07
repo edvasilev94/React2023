@@ -50,6 +50,11 @@ export default function Create() {
                 .then(x => {
                     navigate("/tracks");
                 })
+                .catch(err => {
+                    console.log(err);
+                    alert('Oops! Something went wrong on our end. Please try again later.');
+                    navigate("/");
+                })
         }
     }
 

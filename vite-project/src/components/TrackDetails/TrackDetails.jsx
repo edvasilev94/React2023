@@ -25,6 +25,8 @@ export default function TrackDetails() {
             })
             .catch(err => {
                 console.log(err);
+                alert('Oops! Something went wrong on our end. Please try again later.');
+                navigate("/");
             })
 
     }, [trackId]);
@@ -52,6 +54,11 @@ export default function TrackDetails() {
         tracksService.del(trackId, user.accessToken)
             .then(x => {
                 navigate("/mytracks")
+            })
+            .catch(err => {
+                console.log(err);
+                alert('Oops! Something went wrong on our end. Please try again later.');
+                navigate("/mytracks");
             })
     }
 

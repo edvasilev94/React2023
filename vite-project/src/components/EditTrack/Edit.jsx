@@ -23,6 +23,8 @@ export default function Edit() {
             })
             .catch(err => {
                 console.log(err);
+                alert('Oops! Something went wrong on our end. Please try again later.');
+                navigate("/");
             })
     }, [trackId]);
 
@@ -63,6 +65,11 @@ export default function Edit() {
             }, user.accessToken, track._id)
                 .then(x => {
                     navigate(`/track/details/${track._id}`);
+                })
+                .catch(err => {
+                    console.log(err);
+                    alert('Oops! Something went wrong on our end. Please try again later.');
+                    navigate("/mytracks");
                 })
         }
     }

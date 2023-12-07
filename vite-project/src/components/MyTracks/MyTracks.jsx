@@ -1,6 +1,7 @@
 import './mytracks.css'
 
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import CardTemplate from "../CardTemplate/CartTemplate";
 import { useAuthContext } from "../../contexts/authContext";
 
@@ -10,6 +11,7 @@ import * as tracksService from "../../services/tracksService";
 
 export default function MyTracks() {
 
+    const navigate = useNavigate();
     const { user } = useAuthContext();
     const [tracks, settracks] = useState([]);
 
@@ -20,6 +22,9 @@ export default function MyTracks() {
             })
             .catch(err => {
                 console.log(err);
+                alert('Oops! Something went wrong on our end. Please try again later.');
+                navigate("/");
+               
             })
     }, []);
 
