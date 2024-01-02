@@ -15,3 +15,8 @@ Softuni practise server is used as a remote service. Some changes are made so th
 
 Runs the app in the development mode by `npm run dev` command.\
 Open [http://localhost:5173](http://localhost:5173/) to view it in the browser.
+
+#### Deplyed version
+
+The application is deployed via firebase.
+You can find the deployed version at [https://tourist-tracks.web.app/](https://tourist-tracks.web.app/)

@@ -1,7 +1,7 @@
 import { request } from "./requester";
 
 
-const baseUrl = "http://localhost:3030/data";
+const baseUrl = `${import.meta.env.VITE_API_URL}/data`;
 
 export const getAll = () => request(`${baseUrl}/tracks`)
 
