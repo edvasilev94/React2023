@@ -92,13 +92,13 @@ export default function Edit() {
                                     </div>
                                     <div className="col-md-6">
                                     <div className="form-floating" id="date3" data-target-input="nearest">
-                                            <input type="number" className="form-control bg-transparent" name="trackLength" id="trackLength" defaultValue={track.trackLength} placeholder="Track length in kilometers" />
+                                            <input type="number" step=".01" className="form-control bg-transparent" name="trackLength" id="trackLength" defaultValue={track.trackLength} placeholder="Track length in kilometers" />
                                             <label htmlFor="trackLength">Track length in kilometers</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-floating" id="date3" data-target-input="nearest">
-                                            <input type="number" className="form-control bg-transparent" name="duration" id="duration" defaultValue={track.duration} placeholder="Track duration in hours" />
+                                            <input type="number" step=".01" className="form-control bg-transparent" name="duration" id="duration" defaultValue={track.duration} placeholder="Track duration in hours" />
                                             <label htmlFor="duration">Track duration in hours</label>
                                         </div>
                                     </div>

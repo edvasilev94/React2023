@@ -66,6 +66,10 @@
     .createBooking {
         height: 50rem !important
     }
+
+    .ownerButtons {
+        margin: 0;
+    }
     
 }
     
