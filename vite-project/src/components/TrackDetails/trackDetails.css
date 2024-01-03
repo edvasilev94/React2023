@@ -48,3 +48,28 @@
 .disabledButton{
     display: none;
 }
+
+
+
+@media (max-width: 660px) {
+    .section-title::before {
+        content: none;
+    }
+    
+    .section-title::after {
+        content: none;
+    }
+    
+}
+
+@media (max-width: 770px) {
+    .createBooking {
+        height: 50rem !important
+    }
+    
+}
+    
+
+.btn.btn-primary {
+    margin-bottom: 13px;
+}

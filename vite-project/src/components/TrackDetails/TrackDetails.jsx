@@ -46,7 +46,7 @@ export default function TrackDetails() {
                 setTrack(state => ({...state, likes: likesArr.length}))
             }
         })
-    }, [])
+    }, [track])
 
     const deleteHandler = (e) => {
         e.preventDefault();
